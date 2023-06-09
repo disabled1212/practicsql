@@ -1,0 +1,67 @@
+1. SELECT Employees.fullName
+FROM
+  employees;
+2.SELECT sum(Employees.salary) AS 'Сумма затрат на зарплаты в месяц'
+FROM
+  employees;
+3. SELECT *
+FROM
+  employees
+WHERE
+  department = 7;
+4. UPDATE employees
+SET
+  salary = salary * (50 + 10 / 100)
+WHERE
+  department = 7;
+5. SELECT avg(salary)
+FROM
+  employees
+WHERE
+  department = 7;
+6. INSERT INTO employees (id, fullName, department, salary) VALUES ('3', 'Василий Павлович Чехов', '3', '20000');
+7. DELETE
+FROM
+  employees
+WHERE
+  id = 1;
+8. UPDATE employees
+SET
+  department = 9
+WHERE
+  id = 2;
+9. SELECT fullName
+     , department
+FROM
+  employees;
+10. SELECT fullName
+FROM
+  employees
+WHERE
+  salary = (SELECT min(salary) FROM employees);
+11. SELECT fullName
+FROM
+  employees
+WHERE
+  salary = (SELECT max(salary)
+            FROM
+              employees);
+12. SELECT avg(Employees.salary)
+FROM
+  employees;
+13. SELECT *
+FROM
+  employees;
+14.SELECT fullName
+     , min(salary)
+FROM
+  employees;
+15. SELECT fullName as 'ÔÈÎ'
+     , max(salary) as 'Ìàêñèìàëüíàÿ çàðïëàòà'
+FROM
+  employees;
+16. UPDATE employees
+SET
+  salary = 50000
+WHERE
+  department = 2;
